@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<title>Intro to Redis with Spring Boot</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css"/>
+</head>
+<body bgcolor="white">
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <form id="addForm">
+                <div class="form-group">
+                    <label for="keyInput">Movie ID (key)</label>
+                    <input name="keyInput" id="keyInput" class="form-control"/>
+                </div>
+                <div class="form-group">
+                    <label for="valueInput">Movie Name (field of Movie object value)</label>
+                    <input name="valueInput" id="valueInput" class="form-control"/>
+                </div>
+                <button class="btn btn-default" id="addButton">Add</button>
+            </form>
+        </div>
+        <div class="col-md-8 col-md-offset-1">
+            <table class="table table-hover" id="mainTable">
+                <thead>
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
