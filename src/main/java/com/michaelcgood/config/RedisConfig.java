@@ -18,9 +18,17 @@ import com.michaelcgood.queue.MessageSubscriber;
 @ComponentScan("com.michaelcgood")
 public class RedisConfig {
 
+    @Value("${spring.redis.host}")
+    private String redisHostname;
+    @Value("${spring.redis.port}")
+    private int redisPort;
+
     @Bean
     JedisConnectionFactory jedisConnectionFactory() {
-        return new JedisConnectionFactory();
+        JedisConnectionFactory factory = new JedisConnectionFactory();
+        factory.setHostName(redisHostname);
+        factory.setPort(redisPort);
+        return factory;
     }
 
     @Bean
